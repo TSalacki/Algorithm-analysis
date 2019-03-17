@@ -1,0 +1,53 @@
+i = 0, j = 0	Tablica C odpowiada tablicy A opisanej na początku dokumentacji;
+Dopóki i < N:
+	inkrementuj i
+	jeżeli j == długość tablicy B, przerwij pętlę
+	counter = 0
+	dla każdego x w komórce C[i-1]
+		jeżeli zawartość komórki D[x] == 1, inkrementuj counter
+	jeżeli counter == ilość elementów C[i-1], kontynuuj do początku pętli
+	
+	przenieś liczbę i z tablicy E do F.
+	
+	dla każdego x w komórce C[i-1]
+		jeżli D[x] == 1
+			zdekrementuj j
+		wyzeruj komórkę D[x]
+	dla każdego x w komórce C[i-1]
+		jeżeli B[x] nie jest podzbiorem E i B[x] nie jest podzbiorem F
+			jeżeli D[x] == 0
+				zinkrementuj j
+			zmień zawartość komórki D[x] na 1
+	jeżeli dla każdego x w komórce D[x] x == 1, kontunuuj do początku pętli
+	
+	cały czas:
+		switch = 1
+		dla każdego x w C[i-1]
+			jeżeli D[x] == 0 oraz i == max(B[x])
+				switch = 0
+				przerwij pętlę
+		
+		jeżeli switch == 1, przerwij pętlę
+		jeżeli switch == 0
+			jeżeli w F nie ma żadnych elementów
+				switch = 2
+				przerwij pętlę
+			i = ostatni element F
+			przenieś liczbę i z E do F
+			
+			dla każdego x w komórce C[i-1]
+				jeżli D[x] == 1
+					zdekrementuj j
+				wyzeruj komórkę D[x]
+			dla każdego x w komórce C[i-1]
+				jeżeli B[x] nie jest podzbiorem E i B[x] nie jest podzbiorem F
+					jeżeli D[x] == 0
+						zinkrementuj j
+				zmień zawartość komórki D[x] na 1
+			
+			
+	jeżeli switch == 2, przerwij pętlę
+		
+		
+	
+	
